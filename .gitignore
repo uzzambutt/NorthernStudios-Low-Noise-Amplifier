@@ -1,0 +1,55 @@
+# ==========================================
+# KiCad Project - Git Ignore Rules
+# ==========================================
+
+# KiCad user-specific project preferences (window positions, visible layers, etc.)
+*.kicad_prl
+
+# KiCad backup files
+*.bak
+*-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-save.kicad_pcb
+*-save.kicad_sch
+
+# KiCad autosave & temp files
+_autosave-*
+*.tmp
+*.lck
+
+# KiCad library caches
+fp-info-cache
+
+# DRC / ERC reports (uncomment if you do not want to track reports)
+# *.rpt
+
+# Production / Export outputs (uncomment if you prefer tracking only source files)
+# gerbers/
+# plots/
+# pdf/
+
+# ==========================================
+# OS & Editor Files
+# ==========================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+*~
