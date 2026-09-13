@@ -28,7 +28,7 @@ The **NorthernStudios Wideband VHF/UHF Low-Noise Amplifier (LNA)** is an open-so
 
 The board is tailored for satellite telemetry decoding (such as 137 MHz NOAA APT / Meteor-M LRPT and 435-438 MHz CubeSats), amateur radio communications on the 2m (144-148 MHz) and 70cm (430-440 MHz) bands, and general-purpose wideband Software Defined Radio (SDR) receiver front-ends.
 
-The RF signal paths use 50-ohm Grounded Coplanar Waveguide (GCPW) geometry with continuous via fences and stripped copper perimeter borders on the top and bottom layers, allowing direct slide-in mounting into standard extruded aluminum shielding enclosures.
+The RF signal paths use 50-ohm single-ended coplanar waveguide (CPW) geometry with continuous via fences and stripped copper perimeter borders on the top and bottom layers, allowing direct slide-in mounting into standard extruded aluminum shielding enclosures.
 
 ---
 
@@ -101,7 +101,7 @@ The board features a dual parallel 0805 resistor footprint (R1 || R2) between th
 
 ## PCB Layout & Mechanical Details
 
-* **RF Transmission Lines**: 50-ohm Grounded Coplanar Waveguide (GCPW) calculated for standard 1.6 mm FR-4 dielectric thickness with ground stitching vias on both sides of the trace.
+* **RF Transmission Lines**: 50-ohm single-ended coplanar waveguide (CPW) calculated for standard 1.6 mm FR-4 dielectric thickness with ground stitching vias on both sides of the trace.
 * **Shielding Via Fence**: Close-pitch ground via fencing surrounds the RF trace runs to suppress parasitic substrate resonances and minimize crosstalk with the DC regulation section.
 * **Thermal Relief**: A 4-via thermal array is integrated directly inside the SOT-89 center ground slug pad, sinking heat into internal and bottom ground planes.
 * **Enclosure Contact**: 1.5 mm wide solder mask openings along the top (`F.Mask`) and bottom (`B.Mask`) perimeter edges expose bare copper for direct electrical contact with standard CNC extruded aluminum shielded enclosures.
