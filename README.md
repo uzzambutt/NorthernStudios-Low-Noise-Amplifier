@@ -28,7 +28,7 @@ The **NorthernStudios Wideband VHF/UHF Low-Noise Amplifier (LNA)** is an open-so
 
 The board is tailored for satellite telemetry decoding (such as 137 MHz NOAA APT / Meteor-M LRPT and 435-438 MHz CubeSats), amateur radio communications on the 2m (144-148 MHz) and 70cm (430-440 MHz) bands, and general-purpose wideband Software Defined Radio (SDR) receiver front-ends.
 
-The RF signal paths use 50-ohm single-ended coplanar waveguide (CPW) geometry with continuous via fences and stripped copper perimeter borders on the top and bottom layers, allowing direct slide-in mounting into standard extruded aluminum shielding enclosures.
+The RF signal paths use 50-ohm single-ended coplanar waveguide (CPW) geometry with continuous via fences to maintain impedance matching and minimize parasitic coupling with the power regulation circuitry.
 
 ---
 
@@ -74,7 +74,7 @@ The RF signal paths use 50-ohm single-ended coplanar waveguide (CPW) geometry wi
 
 ### Selectable Thermal / Linearity Biasing
 The board features a dual parallel 0805 resistor footprint (R1 || R2) between the 5V LDO output and the RF bias choke:
-* **High-Dynamic-Range Mode**: Solder two 0-ohm jumpers in place of R1 and R2. The MMIC runs directly at 5.0 V / 90 mA for maximum linearity (+39.5 dBm OIP3), suitable for high-interference environments with adequate enclosure heatsinking.
+* **High-Dynamic-Range Mode**: Solder two 0-ohm jumpers in place of R1 and R2. The MMIC runs directly at 5.0 V / 90 mA for maximum linearity (+39.5 dBm OIP3), suitable for high-interference environments with adequate thermal dissipation.
 * **Safe Thermal Mode**: Solder two 39-ohm resistors in parallel (19.5 ohm net resistance). This drops the drain voltage to ~3.3 V and reduces active MMIC power dissipation from 450 mW to 264 mW, lowering operating temperatures significantly when operating without active cooling.
 
 ---
@@ -99,13 +99,12 @@ The board features a dual parallel 0805 resistor footprint (R1 || R2) between th
 
 ---
 
-## PCB Layout & Mechanical Details
+## PCB Layout Details
 
 * **RF Transmission Lines**: 50-ohm single-ended coplanar waveguide (CPW) calculated for standard 1.6 mm FR-4 dielectric thickness with ground stitching vias on both sides of the trace.
 * **Shielding Via Fence**: Close-pitch ground via fencing surrounds the RF trace runs to suppress parasitic substrate resonances and minimize crosstalk with the DC regulation section.
 * **Thermal Relief**: A 4-via thermal array is integrated directly inside the SOT-89 center ground slug pad, sinking heat into internal and bottom ground planes.
-* **Enclosure Contact**: 1.5 mm wide solder mask openings along the top (`F.Mask`) and bottom (`B.Mask`) perimeter edges expose bare copper for direct electrical contact with standard CNC extruded aluminum shielded enclosures.
-* **Connector Clearance**: End-launch SMA connectors align flush with the board edge notches for slide-in assembly into shielded housings.
+* **RF Connectors**: Edge-mount end-launch SMA female connectors soldered directly to the 50-ohm input and output CPW transmission lines.
 
 ---
 
